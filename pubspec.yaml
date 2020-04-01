@@ -46,8 +46,11 @@ flutter:
   #  - images/a_dot_ham.jpeg
 
   assets:
-    - images/logo_screen_splash.png
-    - images/bg_screen_splash.png
+    - assets/images/logo_screen_splash.png
+    - assets/images/bg_screen_splash.png
+    - assets/images/carte.png
+    - assets/images/qrcode.png
+    - assets/images/tpe.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

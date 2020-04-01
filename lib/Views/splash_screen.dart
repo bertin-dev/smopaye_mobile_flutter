@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:smopaye_mobile/Views/login.dart';
+import 'package:smopaye_mobile/Views/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -26,9 +27,11 @@ class StartState extends State<SplashScreen> {
     return new Timer(duration, route);
   }
 
+  //chargement du onBoarding Page pour la premiere utilisation ensuite ce sera le chargement du login simplement
   route() {
     Navigator.pushReplacement(context, MaterialPageRoute(
-      builder: (context) => Login()
+      //builder: (context) => Login()
+        builder: (context) => OnBoardingPage()
     )
     );
   }
@@ -40,7 +43,7 @@ class StartState extends State<SplashScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/bg_screen_splash.png"),
+            image: AssetImage("assets/images/bg_screen_splash.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -51,7 +54,7 @@ class StartState extends State<SplashScreen> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: 70,
-              child: Image.asset("images/logo_screen_splash.png"),
+              child: Image.asset("assets/images/logo_screen_splash.png"),
             ),
             Padding(padding: EdgeInsets.only(top: 20.0)),
             CircularProgressIndicator(
